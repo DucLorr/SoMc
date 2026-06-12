@@ -8,6 +8,7 @@ import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import meteordevelopment.orbit.EventHandler;
 import net.minecraft.item.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class AutoCraft extends Module {
 
