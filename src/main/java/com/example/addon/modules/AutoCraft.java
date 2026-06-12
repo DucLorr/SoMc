@@ -6,8 +6,8 @@ import meteordevelopment.meteorclient.settings.*;
 import meteordevelopment.meteorclient.systems.modules.Module;
 import meteordevelopment.meteorclient.utils.player.ChatUtils;
 import meteordevelopment.orbit.EventHandler;
-import net.minecraft.item.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 
 public class AutoCraft extends Module {
@@ -60,7 +60,8 @@ public class AutoCraft extends Module {
         if (!crafting) {
             int filled = 0;
             for (int i = 0; i < 36; i++) {
-                if (!mc.player.getInventory().getStack(i).isEmpty()) filled++;
+                ItemStack stack = mc.player.getInventory().getStack(i);
+                if (stack != null && !stack.isEmpty()) filled++;
             }
 
             if (timer % 100 == 0) {
