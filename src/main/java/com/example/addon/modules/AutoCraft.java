@@ -48,9 +48,11 @@ public class AutoCraft extends Module {
         timer++;
 
         if (!crafting) {
+            // Đếm slot đã fill bằng cách dùng main slots
             int filled = 0;
             for (int i = 0; i < 36; i++) {
-                if (!mc.player.getInventory().getStack(i).isEmpty()) filled++;
+                if (mc.player.getInventory().main.get(i).isEmpty()) continue;
+                filled++;
             }
 
             if (timer % 100 == 0) {
