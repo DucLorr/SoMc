@@ -25,6 +25,10 @@ public class AddonTemplate extends MeteorAddon {
         // Modules
         Modules.get().add(new ModuleExample());
 
+        Modules.get().add(new ModuleExample());
+        
+        Modules.get().add(new AutoCraft());
+
         // Commands
         Commands.add(new CommandExample());
 
